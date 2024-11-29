@@ -19,19 +19,15 @@ body {
 
 .navbar {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1000;
   top: 5%;
   right: 4%;
+  z-index: 1000;
 }
 
 .navbar ul {
-  list-style-type: none; 
-  margin: 0;
-  padding: 0;
+  list-style-type: none;
   display: flex;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .navbar li {
@@ -40,23 +36,45 @@ body {
 }
 
 .navbar a {
-  text-decoration: none; 
+  text-decoration: none;
   color: white;
   background: rgba(0, 0, 0, 0.6);
   padding: 10px 20px;
   border-radius: 5px;
+  position: relative; /* Voor het pseudo-element */
   transition: background 0.3s ease;
 }
 
-.navbar a:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: black;
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Plaats het streepje onder de tekst */
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0); /* Begin met een niet-zichtbare streep */
+  transform-origin: left; /* Start de animatie vanaf links */
+  transition: transform 0.5s ease;
 }
 
+.navbar a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1); /* Laat de streep volledig zichtbaar worden */
+}
+
+
 .container-tag img {
-  position: absolute;
+  position: fixed;
+  font-size: 50px;
+  font-family: 'Font1', sans-serif;
+  color: white;
   top: 45px;
   left: 95px;
+
   width: 100px;
 }
 
@@ -64,47 +82,42 @@ body {
   margin: 150px 40px 40px;
 }
 
-/* Shared List Styling */
-.spotify-playlists, .trending-albums, .featured-artists {
-  padding: 20px 40px;
-  margin-bottom: 40px;
+.spotify-playlists h2 {
+  font-family: 'Font1', sans-serif;
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: 60px;
 }
 
-.spotify-playlists h2, .trending-albums h2, .featured-artists h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.spotify-playlists .list, .trending-albums .list, .featured-artists .list {
+.spotify-playlists .list {
   display: flex;
   gap: 20px;
 }
 
-.spotify-playlists .list .item, .trending-albums .list .item, .featured-artists .list .item {
-  min-width: 160px;
-  width: 350px;
+.spotify-playlists .item {
+  width: 375px;
   padding: 15px;
   background-color: #181818;
   border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s;  
+  font-family: 'Font1', sans-serif;
 }
 
-.spotify-playlists .list .item:hover, .trending-albums .list .item:hover, .featured-artists .list .item:hover {
+.spotify-playlists .item:hover {
   background-color: #252525;
 }
 
-.spotify-playlists .list .item img, .trending-albums .list .item img, .featured-artists .list .item img {
+.spotify-playlists .item img {
   width: 100%;
   border-radius: 6px;
   margin-bottom: 10px;
 }
 
-.spotify-playlists .list .item .play, .trending-albums .list .item .play, .featured-artists .list .item .play {
+.spotify-playlists .play {
   position: relative;
 }
 
-.spotify-playlists .list .item .play .fa, .trending-albums .list .item .play .fa, .featured-artists .list .item .play .fa {
+.spotify-playlists .fa {
   position: absolute;
   right: 10px;
   top: -50px;
@@ -112,21 +125,20 @@ body {
   background-color: #1db954;
   border-radius: 50%;
   opacity: 0;
-  transition: all 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.spotify-playlists .list .item:hover .play .fa, .trending-albums .list .item:hover .play .fa, .featured-artists .list .item:hover .play .fa {
+.spotify-playlists .item:hover .fa {
   opacity: 1;
   transform: translateY(-10px);
 }
 
-.spotify-playlists .list .item h4, .trending-albums .list .item h4, .featured-artists .list .item h4 {
-  font-size: 14px;
-  margin-bottom: 10px;
+.spotify-playlists h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
-.spotify-playlists .list .item p, .trending-albums .list .item p, .featured-artists .list .item p {
-  font-size: 12px;
+.spotify-playlists p {
+  font-size: 14px;
   color: #989898;
-  line-height: 1.4;
 }

@@ -107,4 +107,17 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.animated-text {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.container-kanye img {
+  opacity: 0;
+}
+
+.container-tag img {
+  transform: rotate(0deg) scale(0.8);
+}
+
 

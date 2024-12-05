@@ -3,6 +3,11 @@
   src: url('../font/font1.otf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Font2';
+  src: url('../font/font2.otf') format('truetype');
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -38,7 +43,6 @@ body {
 .navbar a {
   text-decoration: none;
   color: white;
-  background: rgba(0, 0, 0, 0.6);
   padding: 10px 20px;
   border-radius: 5px;
   position: relative; /* Voor het pseudo-element */
@@ -68,7 +72,7 @@ body {
 
 
 .container-tag img {
-  position: fixed;
+  position: absolute;
   font-size: 50px;
   font-family: 'Font1', sans-serif;
   color: white;
@@ -100,7 +104,7 @@ body {
   background-color: #181818;
   border-radius: 6px;
   transition: background-color 0.3s;  
-  font-family: 'Font1', sans-serif;
+  font-family: 'Font2', sans-serif;
 }
 
 .spotify-playlists .item:hover {

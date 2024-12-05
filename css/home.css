@@ -12,6 +12,7 @@ body {
     background: url(../images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .navbar {
@@ -35,7 +36,6 @@ body {
   .navbar a {
     text-decoration: none;
     color: white;
-    background: rgba(0, 0, 0, 0.6);
     padding: 10px 20px;
     border-radius: 5px;
     position: relative; /* Voor het pseudo-element */
@@ -97,7 +97,7 @@ body {
 .container-kanye img {
     width: 1200px; 
     height: 900px; 
-    border-radius: 15px;
+    border-radius: 5px;
     opacity: 0.75;
 
     position: fixed;
@@ -105,19 +105,6 @@ body {
     left: 68.2%;
     z-index: -10;
     transform: translate(-50%, -50%);
-}
-
-.animated-text {
-  opacity: 0;
-  transform: translateX(-100px);
-}
-
-.container-kanye img {
-  opacity: 0;
-}
-
-.container-tag img {
-  transform: rotate(0deg) scale(0.8);
 }
 
 

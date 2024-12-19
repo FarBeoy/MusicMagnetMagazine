@@ -45,20 +45,20 @@ body {
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  position: relative; /* Voor het pseudo-element */
+  position: relative; 
   transition: background 0.3s ease;
 }
 
 .navbar a::after {
   content: "";
   position: absolute;
-  bottom: 0; /* Plaats het streepje onder de tekst */
+  bottom: 0;
   left: 0;
   height: 5px;
   width: 100%;
   background: white;
-  transform: scaleX(0); /* Begin met een niet-zichtbare streep */
-  transform-origin: left; /* Start de animatie vanaf links */
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform 0.5s ease;
 }
 
@@ -67,7 +67,26 @@ body {
 }
 
 .navbar a:hover::after {
-  transform: scaleX(1); /* Laat de streep volledig zichtbaar worden */
+  transform: scaleX(1);
+}
+
+.burger-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.burger-menu .bar {
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  background-color: white;
+  transition: 0.4s;
 }
 
 .container-tag img {
@@ -145,54 +164,71 @@ body {
   color: #989898;
 }
 
-/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
   .navbar {
-      position: static;
-      top: auto;
-      right: auto;
+    position: static;
+    top: auto;
+    right: auto;
   }
 
   .navbar ul {
+      display: none;
       flex-direction: column;
-      gap: 5px;
+      gap: 0;
       align-items: center;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      justify-content: center;
   }
 
-  .navbar li {
-      font-size: 30px;
+  .navbar.open ul {
+      display: flex; 
+  }
+
+  .burger-menu {
+      display: block; 
+      inset-block: right;
   }
 
   .navbar a {
-      padding: 8px 15px;
-  }
-
-  .container-tag img {
-      width: 80px;
-      top: 25px;
-      left: 50px;
+      font-size: 25px;
+      padding: 15px 30px;
   }
 
   .main-container {
-      margin: 100px 20px;
+    margin: 100px 20px;
+}
+
+  .container-tag img {
+      width: 70px;
+      top: 20px;
+      left: 30px;
+  }
+
+  .main-container {
+      margin: 80px 10px;
   }
 
   .spotify-playlists h2 {
-      font-size: 25px;
-  }
-
-  .spotify-playlists .list {
-      flex-direction: column;
-      align-items: center;
+      font-size: 20px;
   }
 
   .spotify-playlists .item {
-      width: 90%;
-      margin-bottom: 15px;
+      width: 100%;
+      padding: 12px;
+  }
+
+  .spotify-playlists .list {
+    flex-direction: column;
+    align-items: center;
   }
 
   .spotify-playlists h4 {
-      font-size: 18px;
+      font-size: 16px;
   }
 
   .spotify-playlists p {
@@ -234,83 +270,5 @@ body {
 
   .spotify-playlists p {
       font-size: 11px;
-  }
-}
-
-/* Hamburger Icon */
-.burger-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding-right: 20px;
-  padding-top: 10px;
-  cursor: pointer;
-  z-index: 2000;
-}
-
-.burger-menu .bar {
-  width: 35px;
-  height: 5px;
-  margin: 6px 0;
-  background-color: white;
-  transition: 0.4s;
-}
-
-/* Mobile Navigation Styles */
-@media (max-width: 768px) {
-  .navbar ul {
-      display: none;
-      flex-direction: column;
-      gap: 0;
-      align-items: center;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      justify-content: center;
-  }
-
-  .navbar.open ul {
-      display: flex; /* Show menu when open */
-  }
-
-  .burger-menu {
-      display: block; /* Show hamburger menu */
-      inset-block: right;
-  }
-
-  .navbar a {
-      font-size: 25px;
-      padding: 15px 30px;
-  }
-
-  .container-tag img {
-      width: 70px;
-      top: 20px;
-      left: 30px;
-  }
-
-  .main-container {
-      margin: 80px 10px;
-  }
-
-  .spotify-playlists h2 {
-      font-size: 20px;
-  }
-
-  .spotify-playlists .item {
-      width: 100%;
-      padding: 12px;
-  }
-
-  .spotify-playlists h4 {
-      font-size: 16px;
-  }
-
-  .spotify-playlists p {
-      font-size: 12px;
   }
 }

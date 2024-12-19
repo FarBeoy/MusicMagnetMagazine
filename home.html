@@ -7,8 +7,16 @@
     <title>Home</title>
 </head>
 <body>
+    <div class="overlay"></div>
 
     <nav class="navbar">
+        <!-- Hamburger Menu Icon -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="pages/videos.html">Videos</a></li>
@@ -21,18 +29,18 @@
     <div class="container-tag">
         <img src="images/MMM.png" alt="MMM Logo">
     </div>
-    
 
     <div class="container-titel">
         <h1>Music</h1>
-            <h1>Magnet</h1>
+        <h1>Magnet</h1>
     </div>
 
     <div class="container-kanye">
         <img src="images/kanye.avif" alt="Kanye West">
     </div>
 
-    <script src="js/animations.js"></script>
-    
+    <script src="../js/animations.js"></script>
+    <script src="js/hamburgermenu.js"></script>
+
 </body>
 </html>

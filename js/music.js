@@ -1,4 +1,3 @@
-// Highlight current song playing
 document.querySelectorAll('.play').forEach(button => {
     button.addEventListener('click', function () {
         const audio = this.parentElement.querySelector('audio');

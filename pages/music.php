@@ -31,10 +31,10 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     </div>
 
     <ul>
-        <li><a href="../home.html">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
+        <li><a href="../home.php">Home</a></li>
+        <li><a href="videos.php">Videos</a></li>
         <li><a href="music.php">Music</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.php">About</a></li>
         <?php
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
             echo '<li><a href="logout.php">Logout</a></li>';

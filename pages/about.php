@@ -17,13 +17,20 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-    
+
         <ul>
-            <li><a href="../home.html">Home</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="../music.html">Music</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="friends.html">Friends</a></li>
+            <li><a href="../home.php">Home</a></li>
+            <li><a href="videos.php">Videos</a></li>
+            <li><a href="music.php">Music</a></li>
+            <li><a href="about.php">About</a></li>
+            <?php
+            if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+                echo '<li><a href="logout.php">Logout</a></li>';
+                echo '<li><a href="chat.php">Chat</a></li>';
+            } else {
+                echo '<li><a href="login.php">Login</a></li>';
+            }
+            ?>
         </ul>
     </nav>
 

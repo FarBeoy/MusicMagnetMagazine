@@ -37,9 +37,11 @@
 
 <div id="room-selection">
     <h1>Select a Chat Room</h1>
-    <button onclick="selectRoom('Room 1')">Room 1</button>
-    <button onclick="selectRoom('Room 2')">Room 2</button>
-    <button onclick="selectRoom('Room 3')">Room 3</button>
+    <div id="centered-chat-button">
+        <button onclick="selectRoom('Room 1')">Room 1</button>
+        <button onclick="selectRoom('Room 2')">Room 2</button>
+        <button onclick="selectRoom('Room 3')">Room 3</button>
+    </div>
 </div>
 
 <div id="chat-container" style="display: none;">

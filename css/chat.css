@@ -1,28 +1,108 @@
+@font-face {
+    font-family: 'Font1';
+    src: url('../font/font1.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url('../font/font2.otf') format('truetype');
+}
+
 body {
-    font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background: url(../images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar li {
+    font-family: 'Font1', sans-serif;
+    font-size: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
 }
 
 #room-selection, #chat-container {
     margin-top: 50px;
 }
 
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+#centered-chat-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button:hover {
-    background-color: #0056b3;
+#centered-chat-button button {
+    padding: 15px 30px;
+    margin: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #636363;
+    color: White;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Font2, sans-serif;
+}
+
+#centered-chat-button button:hover {
+    background-color: #494848;
+}
+
+#chat-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #chat-box {

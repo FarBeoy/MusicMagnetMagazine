@@ -1,40 +1,27 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header('Location: login.php');
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/music.css">
-    <title>Muziek Toevoegen</title>
+    <link rel="stylesheet" href="../css/toevoegen.css">
+    <title>Muziek Toevoegen | Music Magnet Magazine</title>
 </head>
 <body>
-<div class="form-container">
-    <h2>Muziek Toevoegen</h2>
-    <form action="view/toevoegen_view.php" method="POST" enctype="multipart/form-data">
-        <label for="artist_name">Artiest Naam:</label>
-        <input type="text" id="artist_name" name="artist_name" required>
+<h1>Muziek Toevoegen</h1>
+<form action="view/toevoegen_view.php" method="POST" enctype="multipart/form-data">
+    <label for="title">Titel:</label>
+    <input type="text" id="title" name="title" required>
 
-        <label for="song_name">Muziek Titel:</label>
-        <input type="text" id="song_name" name="song_name" required>
+    <label for="artist">Artiest:</label>
+    <input type="text" id="artist" name="artist" required>
 
-        <label for="image_file">Afbeelding Uploaden:</label>
-        <input type="file" id="image_file" name="image_file" accept="image/*" required>
+    <label for="cover">Cover Afbeelding:</label>
+    <input type="file" id="cover" name="cover" accept="image/*" required>
 
-        <label for="song_link">YouTube Link:</label>
-        <input type="url" id="song_link" name="song_link" placeholder="Bijvoorbeeld: https://www.youtube.com/embed/tXKh6P10vSY" required>
+    <label for="audio">MP3 Bestand:</label>
+    <input type="file" id="audio" name="audio" accept="audio/mpeg" required>
 
-        <button type="submit">Toevoegen</button>
-    </form>
-</div>
+    <button type="submit">Muziek Toevoegen</button>
+</form>
 </body>
 </html>
-

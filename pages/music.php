@@ -2,12 +2,6 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
-if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-    echo '<div class="add-button-container">';
-    echo '<a href="toevoegen.php" class="add-button">Muziek Toevoegen</a>';
-    echo '</div>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +56,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>Heartless</h4>
                 <p>Kanye West</p>
                 <audio>
-                    <source src="../audio/Kanye West - Heartless (Lyrics).mp3" type="audio/mpeg">
+                    <source src="../../audio/Kanye West - Heartless (Lyrics).mp3" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -74,7 +68,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>Flashing Lights</h4>
                 <p>Kanye West</p>
                 <audio>
-                    <source src="../audio/Flashing Lights.mp3" type="audio/mpeg">
+                    <source src="../../audio/Flashing Lights.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -86,7 +80,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>Carnival</h4>
                 <p>Kanye West</p>
                 <audio>
-                    <source src="../audio/CARNIVAL - Kanye West & Dolla $ign (Lyrics) feat. [Playboi Carti, Rich The Kid].mp3" type="audio/mpeg">
+                    <source src="../../audio/CARNIVAL - Kanye West & Dolla $ign (Lyrics) feat. [Playboi Carti, Rich The Kid].mp3" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -98,7 +92,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>Father Stretch My Hands pt.1</h4>
                 <p>Kanye West</p>
                 <audio>
-                    <source src="../audio/Father Stretch My Hands Pt. 1.mp3" type="audio/mpeg">
+                    <source src="../../audio/Father Stretch My Hands Pt. 1.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -110,7 +104,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>All Falls Down</h4>
                 <p>Kanye West</p>
                 <audio>
-                    <source src="../audio/All Falls Down.mp3" type="audio/mpeg">
+                    <source src="../../audio/All Falls Down.mp3" type="audio/mpeg">
                 </audio>
             </div>
         </div>
@@ -127,7 +121,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>All Girl Are The Same</h4>
                 <p>Juice Wrld</p>
                 <audio>
-                    <source src="../audio/All Girls Are The Same.mp3" type="audio/mpeg">
+                    <source src="../../audio/All Girls Are The Same.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -139,7 +133,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>Lucid Dreams</h4>
                 <p>Juice Wrld</p>
                 <audio>
-                    <source src="../audio/Lucid Dreams.mp3" type="audio/mpeg">
+                    <source src="../../audio/Lucid Dreams.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -151,7 +145,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>Robbery</h4>
                 <p>Juice Wrld</p>
                 <audio>
-                    <source src="../audio/Robbery.mp3" type="audio/mpeg">
+                    <source src="../../audio/Robbery.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -163,7 +157,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>Lean Wit Me</h4>
                 <p>Juice Wrld</p>
                 <audio>
-                    <source src="../audio/Juice WRLD - Lean Wit Me (Official Audio).mp3" type="audio/mpeg">
+                    <source src="../../audio/Juice WRLD - Lean Wit Me (Official Audio).mp3" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -175,7 +169,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 <h4>Let Me Know</h4>
                 <p>Juice Wrld</p>
                 <audio>
-                    <source src="../audio/Juice WRLD Let Me Know (I Wonder Why Freestyle) (Official Audio).mp3" type="audio/mpeg">
+                    <source src="../../audio/Juice WRLD Let Me Know (I Wonder Why Freestyle) (Official Audio).mp3" type="audio/mpeg">
                 </audio>
             </div>
         </div>
@@ -285,8 +279,19 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     <div class="spotify-playlists">
         <h2>MMM Custom Added Music</h2>
         <div class="list">
+            <?php require 'view/music_view.php'; ?>
         </div>
     </div>
+    <?php
+
+    if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+        echo '<div class="add-button-container">';
+        echo '<a href="toevoegen.php" class="add-button">Muziek Toevoegen</a>';
+        echo '</div>';
+    }
+    ?>
+
+</div>
 </div>
 
 <script src="../js/music.js"></script>

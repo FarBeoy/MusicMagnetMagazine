@@ -1,14 +1,23 @@
 <?php
+$db = new SQLite3('../magnet.sqlite');
 
-$db = new SQLite3('../../magnet.sqlite');
+$result = $db->query("SELECT * FROM music");
 
-$query = "SELECT * FROM music";
-$result = $db->query($query);
-
-while ($row = $result->fetchArray()) {
-    echo "<div class='music-item'>";
-    echo "<h3>" . htmlspecialchars($row['song_name']) . " - " . htmlspecialchars($row['artist_name']) . "</h3>";
-    echo "<img src='" . htmlspecialchars($row['image_file']) . "' alt='Afbeelding'>";
-    echo "<iframe width='560' height='315' src='" . htmlspecialchars($row['song_link']) . "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
-    echo "</div>";
+if ($result) {
+    while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+        echo '<div class="item">';
+        echo '<img src="../' . htmlspecialchars($row['cover']) . '" alt="Cover">';
+        echo '<div class="play">';
+        echo '<span class="fa fa-play"></span>';
+        echo '</div>';
+        echo '<h4>' . htmlspecialchars($row['title']) . '</h4>';
+        echo '<p>' . htmlspecialchars($row['artist']) . '</p>';
+        echo '<audio controls>';
+        echo '<source src="../' . htmlspecialchars($row['audio']) . '" type="audio/mpeg">';
+        echo 'Je browser ondersteunt geen audio playback.';
+        echo '</audio>';
+        echo '</div>';
+    }
+} else {
+    echo '<p>Er is nog geen muziek toegevoegd.</p>';
 }

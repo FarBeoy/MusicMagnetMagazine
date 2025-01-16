@@ -3,6 +3,11 @@
   src: url('../font/font1.otf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Font2';
+  src: url('../font/font2.otf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +16,7 @@
 body {
   background: url(../images/background.jpg) no-repeat center center fixed;
   background-size: cover;
-  overflow: hidden;
+  height: 300vh;
 }
 
 .navbar {
@@ -63,7 +68,7 @@ body {
 }
 
 .container-tag img {
-  position: fixed;
+  position: absolute;
   top: 45px;
   left: 95px;
   width: 100px;
@@ -75,7 +80,7 @@ body {
   font-size: 200px;
   font-family: 'Font1', sans-serif;
   z-index: 1;
-  position: fixed;
+  position: absolute;
   top: 55%;
   left: 40%;
   transform: translate(-50%, -50%);
@@ -93,7 +98,7 @@ body {
   height: 900px;
   border-radius: 5px;
   opacity: 0.75;
-  position: fixed;
+  position: absolute;
   top: 54%;
   left: 68.2%;
   z-index: -10;
@@ -106,7 +111,7 @@ body {
   top: 10px;
   right: 20px;
   cursor: pointer;
-  z-index: 2000; 
+  z-index: 2000;
 }
 
 .burger-menu .bar {
@@ -120,22 +125,26 @@ body {
 @media (max-width: 768px) {
 
   body {
-      background-image: url(../images/kanye.avif);
-      background-size: cover; 
-    }
+    background-image: url(../images/kanye.avif);
+    background-size: cover;
+  }
 
   .navbar ul {
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed; 
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+  <<<<<<< Updated upstream
+  width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+  =======
+  width: 80%;
+  >>>>>>> Stashed changes
+  background-color: rgba(0, 0, 0, 0.9);
     border-radius: 15px;
     z-index: 1000;
     padding: 40px;
@@ -171,44 +180,44 @@ body {
     left: 30px;
   }
 
-  
+
   .container-titel {
-      font-size: 120px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      line-height: 1.1;
+    font-size: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.1;
   }
 
   .container-kanye img {
-      width: 800px; 
-      height: 600px;
-      opacity: 0.75;
-      top: 70%; 
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: none;
+    width: 800px;
+    height: 600px;
+    opacity: 0.75;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .container-titel {
-      font-size: 80px;
-      top: 45%; 
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center; 
-      line-height: 1.2;
+    font-size: 80px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.2;
   }
 
   .container-kanye img {
-      width: 500px; 
-      height: 375px;
-      opacity: 0.50;
-      top: 65%; 
-      left: 50%; 
-      transform: translate(-50%, -50%);
+    width: 500px;
+    height: 375px;
+    opacity: 0.50;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .overlay {
@@ -220,4 +229,62 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
+}
+
+.article {
+  width: 90vw; /* Increased width for the article */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.container-article {
+  text-align: left;
+  font-size: 24px;
+  width: 700px;
+  font-family: 'Font2', sans-serif;
+  margin-bottom: 40px;
+  color: white;
+  margin-left: 100px;
+}
+
+.article-image {
+  width: 1200px;
+  height: 900px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.article2 {
+  width: 90vw; /* Increased width for the article */
+  position: absolute;
+  top: 200%;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.container-article2 {
+  text-align: left;
+  font-size: 24px;
+  width: 700px;
+  font-family: 'Font2', sans-serif;
+  margin-bottom: 40px;
+  color: white;
+  margin-left: 100px;
+}
+
+.article-image2 {
+  width: 1200px;
+  height: 900px;
+  opacity: 0.8;
+  border-radius: 10px;
 }

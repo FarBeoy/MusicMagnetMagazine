@@ -5,7 +5,7 @@ function selectRoom(room) {
     selectedRoom = room;
     document.getElementById('room-selection').style.display = 'none';
     document.getElementById('chat-container').style.display = 'block';
-    document.getElementById('room-name').textContent = `You are in ${room}`;
+    document.getElementById('room-name').textContent = `Je gaat ${room} joinen`;
     fetchMessages();
 }
 

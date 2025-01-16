@@ -44,9 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindValue(':audio', $audioURL, SQLITE3_TEXT);
 
         if ($stmt->execute()) {
-            echo "Muziek succesvol toegevoegd!";
+            header('location: ../music.php');
         } else {
-            echo "Fout bij het toevoegen aan de database.";
+            header('location: ../toevoegen.php');
         }
     } else {
         foreach ($errors as $error) {

@@ -110,14 +110,14 @@ body {
 .container h1 {
     font-size: 96px;
     font-family: 'Font1', sans-serif;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: white;
 }
 
 .container p {
     line-height: 1.6;
     margin-bottom: 15px;
-    font-size: 19px;
+    font-size: 20px;
     opacity: 0.8;
 }
 
@@ -156,10 +156,11 @@ body {
 
     .container h1 {
         font-size: 70px;
+        margin-top: 20px;
     }
 
     .container p {
-        margin-bottom: -60px;
+        margin-bottom: -50px;
     }
 
     .overlay {
@@ -171,30 +172,31 @@ body {
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
       }
-      
+
     .navbar ul {
         display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: fixed; 
+        position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 80%; 
+        width: 100%;
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.9);
         border-radius: 15px;
         z-index: 1000;
         padding: 20px;
-        gap: 15px;
+        gap: 45px;
     }
-  
+
     .navbar.open ul {
         display: flex;
     }
-  
+
     .navbar a {
-        font-size: 25px;
+        font-size: 55px;
         padding: 15px 30px;
         color: white;
     }
@@ -225,7 +227,7 @@ body {
   @media (max-width: 480px) {
     .container-titel {
         font-size: 80px;
-        top: 45%; 
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center; 

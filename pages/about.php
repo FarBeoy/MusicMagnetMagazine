@@ -51,20 +51,18 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="container">
         <h1>About Music</h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            Music is a universal language that touches hearts and connects people across the globe. It has the power to express emotions, tell stories, and unite communities. From ancient melodies to modern beats, music reflects the essence of cultures and history.
         </p>
         <br>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-             quis nostrud exercitation ullamco laboris nisi ut aliquiq.
+            Whether it's the rhythm of drums, the harmony of a choir, or the energy of electronic music, each genre offers something unique. Music evolves constantly, blending tradition with innovation, and continues to inspire creativity and expression in people of all ages.
         </p>
         <br>
         <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            Beyond entertainment, music is a source of healing and inspiration. It has the ability to soothe the mind, uplift the soul, and bring joy. In every note and lyric, music reminds us of the beauty of life and our shared humanity.
         </p>
     </div>
+
 
     <Script src="../js/hamburgermenu.js"></Script>
     <script src="https://kit.fontawesome.com/23cecef777.js" crossorigin="anonymous"></script>

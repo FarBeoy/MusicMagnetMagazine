@@ -41,6 +41,12 @@ if (session_status() === PHP_SESSION_NONE) {
     </ul>
 </nav>
 
+<div class="contianer-main">
+    <div class="container-tag">
+        <img src="../images/MMM.png" alt="MMM Logo">
+    </div>
+</div>
+
 <div id="room-selection">
     <h1>Select a Chat Room</h1>
     <div id="centered-chat-button">

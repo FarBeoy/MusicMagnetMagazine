@@ -131,7 +131,7 @@ body {
 
 #centered-chat-button {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -156,10 +156,18 @@ body {
     background-color: #494848;
 }
 
+.container-tag img {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 70px;
+    z-index: 50;
+}
+
 h1 {
     font-family: 'Font1', sans-serif;
     color: white;
-    padding-top: 300px;
+    padding-top: 100px;
 }
 
 #room-name {
@@ -184,7 +192,7 @@ input[type="text"], input[type="file"] {
 
 #chat-container {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -197,19 +205,21 @@ input[type="text"], input[type="file"] {
 }
 
 #messages {
-    width: 500px;
+    width: 300px;
     height: 500px;
     margin: 0 auto;
     border: 1px solid #ddd;
     overflow-y: auto;
     padding: 10px;
     background-color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 #message-input {
     width: 40%;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: -10px;
 }
 
 #send-message {

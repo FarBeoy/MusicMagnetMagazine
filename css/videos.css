@@ -139,9 +139,9 @@ body {
 }
 
 .responsive-iframe {
-    width: 345px; 
+    width: 345px;
     height: 200px;
-    transition: width 0.3s, height 0.3s; 
+    transition: width 0.3s, height 0.3s;
 }
 
 /* Algemene stijlen blijven hetzelfde zoals in jouw code */

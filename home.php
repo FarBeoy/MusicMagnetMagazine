@@ -49,7 +49,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 
     <div class="container-kanye">
-        <img src="images/kanye.avif" alt="Kanye West">
+        <img src="images/ts.jpg" alt="Kanye West">
     </div>
 </div>
 

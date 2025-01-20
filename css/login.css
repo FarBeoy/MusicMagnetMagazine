@@ -20,17 +20,19 @@ body {
     background-size: cover;
     height: 100vh;
     color: #fff;
+    overflow:hidden ;
 }
 
 .login-container {
-    background: Gray;
-    color: black;
+    color: white;
     width: 400px;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
     text-align: center;
     position: relative;
+    background-color: black;
+    border: 3px solid #ffffff;
 }
 
 h1 {
@@ -84,7 +86,7 @@ button:hover {
 }
 
 .register-link a {
-    color: White;
+    color: grey;
     text-decoration: none;
     font-weight: bold;
 }
@@ -114,6 +116,22 @@ button:hover {
     color: green;
     font-size: 14px;
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-color: black;
+    }
+    .login-container {
+    width: 300px;
+    position: fixed}
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    box-shadow: 5px 10px #ffffff;
+    background-color: black;
+    border: 3px solid #ffffff;
 }
 
 

@@ -207,9 +207,10 @@ body {
 @media (max-width: 768px) {
 
   body{
-    height: 235vh;
+    height: 245vh;
     overflow-x: hidden;
     width: 100%;
+    background-color:black ;
   }
   .navbar ul {
     display: none;
@@ -306,14 +307,14 @@ body {
 
   .article {
     position: absolute;
-    top: 50vh; /* Verschuif de afbeelding verder naar beneden */
+    top: 45vh; /* Verschuif de afbeelding verder naar beneden */
     left: 50%;
     transform: translateX(-50%);
   }
 
   .article2 {
     position: absolute;
-    top: 160vh; /* Verschuif de afbeelding verder naar beneden */
+    top: 165vh; /* Verschuif de afbeelding verder naar beneden */
     left: 50%;
     transform: translateX(-50%);
   }

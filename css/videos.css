@@ -148,6 +148,9 @@ body {
 
 /* Aanpassingen voor kleinere schermen */
 @media (max-width: 768px) {
+    body{
+        background-color: black;
+    }
     .navbar ul {
         display: none;
         flex-direction: column;

@@ -142,6 +142,7 @@ body {
     body {
         background-size: cover;
         background-color: black;
+        overflow-x: hidden;
   
     }
     

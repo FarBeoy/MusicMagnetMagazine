@@ -208,6 +208,11 @@ body {
     .mmm-playlists .item {
         width: 100%;
         padding: 10px;
+        border-bottom: 20px solid rgba(255, 255, 255, 0.6);;
+        border-left: 5px solid rgba(255, 255, 255, 0.6);;
+        border-top: 5px solid rgba(255, 255, 255, 0.6);;
+        border-right: 5px solid rgba(255, 255, 255, 0.6);
+        border-radius: 20px;
     }
 
     .mmm-playlists h4 {
@@ -293,8 +298,13 @@ body {
     }
 
     .mmm-playlists .item {
-        width: 100%;
+        width: 90%;
         padding: 12px;
+        border-bottom: 20px solid rgba(255, 255, 255, 0.6);;
+        border-left: 5px solid rgba(255, 255, 255, 0.6);;
+        border-top: 5px solid rgba(255, 255, 255, 0.6);;
+        border-right: 5px solid rgba(255, 255, 255, 0.6);
+        border-radius: 20px;
     }
 
     .mmm-playlists h4 {

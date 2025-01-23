@@ -82,7 +82,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 </div>
 
-<script src="../js/animations.js"></script>
+<script src="js/animations.js"></script>
 <script src="js/hamburgermenu.js"></script>
 
 </body>

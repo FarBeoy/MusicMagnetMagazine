@@ -207,7 +207,7 @@ body {
 @media (max-width: 768px) {
 
   body{
-    height: 300vh;
+    height: 230vh;
     overflow-x: hidden;
     width: 100%;
     background-color:black ;
@@ -319,7 +319,7 @@ body {
 
   .article2 {
     position: absolute;
-    top: 185vh; /* Verschuif de afbeelding verder naar beneden */
+    top: 150vh; /* Verschuif de afbeelding verder naar beneden */
     left: 50%;
     transform: translateX(-50%);
     border-bottom: 20px solid rgba(255, 255, 255, 0.6);;

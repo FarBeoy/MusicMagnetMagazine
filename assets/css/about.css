@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'Font1';
+    src: url('../font/font1.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url('../font/font2.otf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    height: 115vh;
+    font-family: 'font2', sans-serif;
+    background: url(../media/images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar li {
+    font-family: 'Font1', sans-serif;
+    font-size: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.left-image {
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.left-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-tag img {
+    position: fixed;
+    top: 45px;
+    left: 95px;
+    width: 100px;
+    z-index: 50;
+}
+
+.container {
+    position: absolute;
+    top: 22%;
+    right: 7%;
+    margin-left: 50%;
+    padding: 40px;
+    width: 35%;
+    color: white;
+    text-align: justify;
+}
+
+.container h1 {
+    font-size: 96px;
+    font-family: 'Font1', sans-serif;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.container p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 20px;
+    opacity: 1;
+    color: white;
+}
+
+.burger-menu {
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    z-index: 2000; 
+  }
+  
+  .burger-menu .bar {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  @media (max-width: 768px) {
+
+    body {
+        background-size: cover;
+        background-color: black;
+        overflow-x: hidden;
+  
+    }
+    
+    .container {
+        left: 0%;
+        bottom: 40%;
+        width: 400px;
+        font-size: 50px;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        line-height: 1.1;
+        z-index: 100;
+    }
+
+    .container h1 {
+        font-size: 70px;
+        margin-top: 20px;
+    }
+
+    .container p {
+        margin-bottom: -50px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 115vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 15px;
+        z-index: 1000;
+        padding: 20px;
+        gap: 45px;
+    }
+
+    .navbar.open ul {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 55px;
+        padding: 15px 30px;
+        color: white;
+    }
+
+    .container-tag img {
+        width: 70px;
+        top: 20px;
+        left: 30px;
+    }
+    
+    .burger-menu {
+        display: block;
+        z-index: 2000;
+        top: 10px;
+        right: 20px;
+    }
+  
+    .burger-menu .bar {
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        background-color: white;
+        transition: 0.4s;
+    }
+  }
+ 
+  
+  @media (max-width: 480px) {
+    .container-titel {
+        font-size: 80px;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; 
+        line-height: 1.2;
+    }
+  
+    .container-kanye img {
+        width: 500px; 
+        height: 375px;
+        opacity: 0.50;
+        top: 65%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+    }
+  }
+

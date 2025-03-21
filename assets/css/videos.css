@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'Font1';
+    src: url('../font/font1.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url('../font/font2.otf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../media/images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+
+.navbar {
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar li {
+    font-family: 'Font1', sans-serif;
+    font-size: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.burger-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.burger-menu .bar {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.container-tag img {
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Font1', sans-serif;
+    color: white;
+    top: 45px;
+    left: 95px;
+    width: 100px;
+}
+
+.main-container {
+    margin: 150px 40px 40px;
+}
+
+.mmm-playlists h2 {
+    font-family: 'Font1', sans-serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 60px;
+}
+
+.mmm-playlists .list {
+    display: flex;
+    gap: 20px;
+}
+
+.mmm-playlists .item {
+    width: 375px;
+    padding: 15px;
+    background-color: #181818;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-family: 'Font2', sans-serif;
+}
+
+.mmm-playlists .item:hover {
+    background-color: #252525;
+}
+
+.mmm-playlists h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.mmm-playlists p {
+    font-size: 14px;
+    color: #989898;
+}
+
+.responsive-iframe {
+    width: 345px;
+    height: 200px;
+    transition: width 0.3s, height 0.3s;
+}
+
+/* Algemene stijlen blijven hetzelfde zoals in jouw code */
+
+/* Aanpassingen voor kleinere schermen */
+@media (max-width: 768px) {
+    body{
+        background-color: black;
+    }
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 15px;
+        z-index: 1000;
+        padding: 40px;
+        gap: 45px;
+    }
+
+    .navbar.open ul {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .navbar {
+        position: static;
+    }
+
+    .navbar a {
+        font-size: 55px;
+        padding: 10px 20px;
+    }
+
+    .container-tag img {
+        width: 60px;
+        top: 10px;
+        left: 20px;
+    }
+
+    .main-container {
+        margin: 100px 20px;
+    }
+
+    .mmm-playlists h2 {
+        font-size: 22px;
+    }
+
+    .mmm-playlists .list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mmm-playlists .item {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 20px solid rgba(255, 255, 255, 0.6);;
+        border-left: 5px solid rgba(255, 255, 255, 0.6);;
+        border-top: 5px solid rgba(255, 255, 255, 0.6);;
+        border-right: 5px solid rgba(255, 255, 255, 0.6);
+        border-radius: 20px;
+    }
+
+    .mmm-playlists h4 {
+        font-size: 18px;
+    }
+
+    .mmm-playlists p {
+        font-size: 14px;
+    }
+
+    .responsive-iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar li {
+        font-size: 16px;
+    }
+
+    .navbar a {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .container-tag img {
+        width: 50px;
+        top: 5px;
+        left: 15px;
+    }
+
+    .main-container {
+        margin: 70px 10px;
+    }
+
+    .mmm-playlists h2 {
+        font-size: 18px;
+    }
+
+    .mmm-playlists .item {
+        padding: 8px;
+    }
+
+    .mmm-playlists h4 {
+        font-size: 14px;
+    }
+
+    .mmm-playlists p {
+        font-size: 12px;
+    }
+
+    .responsive-iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar li {
+        font-size: 25px;
+    }
+
+    .navbar a {
+        padding: 6px 12px;
+        font-size: 55px;
+    }
+
+    .container-tag img {
+        width: 60px;
+        top: 20px;
+        left: 40px;
+    }
+
+    .main-container {
+        margin: 80px 10px;
+    }
+
+    .mmm-playlists h2 {
+        font-size: 20px;
+    }
+
+    .mmm-playlists .item {
+        width: 90%;
+        padding: 12px;
+        border-bottom: 20px solid rgba(255, 255, 255, 0.6);;
+        border-left: 5px solid rgba(255, 255, 255, 0.6);;
+        border-top: 5px solid rgba(255, 255, 255, 0.6);;
+        border-right: 5px solid rgba(255, 255, 255, 0.6);
+        border-radius: 20px;
+    }
+
+    .mmm-playlists h4 {
+        font-size: 16px;
+    }
+
+    .mmm-playlists p {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,360 @@
+@font-face {
+  font-family: 'Font1';
+  src: url('../font/font1.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Font2';
+  src: url('../font/font2.otf') format('truetype');
+}
+
+html, body {
+  overflow-x: hidden;  /* Voorkom horizontale scroll */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../media/images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 290vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: absolute;
+  top: 5%;
+  right: 4%;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.navbar li {
+  font-family: 'Font1', sans-serif;
+  font-size: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.navbar a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+.burger-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.burger-menu .bar {
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.container-tag img {
+  position: absolute;
+  top: 45px;
+  left: 95px;
+  width: 100px;
+  z-index: 50;
+}
+
+.container-titel {
+  color: white;
+  font-size: 200px;
+  font-family: 'Font1', sans-serif;
+  z-index: 1;
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  line-height: 1;
+}
+
+.container-titel h1 {
+  margin: -10%;
+  padding: 0;
+}
+
+.container-kanye img {
+  width: 1200px;
+  height: 900px;
+  border-radius: 5px;
+  opacity: 0.75;
+  position: absolute;
+  top: 54%;
+  left: 68.2%;
+  z-index: -10;
+  transform: translate(-50%, -50%);
+}
+
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.burger-menu .bar {
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.article {
+  width: 90vw; /* Increased width for the article */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.container-article {
+  text-align: left;
+  font-size: 24px;
+  width: 700px;
+  font-family: 'Font2', sans-serif;
+  margin-bottom: 40px;
+  color: white;
+  margin-left: 100px;
+}
+
+.article-image {
+  width: 1200px;
+  height: 900px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.article2 {
+  width: 90vw; /* Increased width for the article */
+  position: absolute;
+  top: 200%;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.container-article2 {
+  text-align: left;
+  font-size: 24px;
+  width: 700px;
+  font-family: 'Font2', sans-serif;
+  margin-bottom: 40px;
+  color: white;
+  margin-left: 100px;
+}
+
+.article-image2 {
+  width: 1200px;
+  height: 900px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+
+  body{
+    height: 230vh;
+    overflow-x: hidden;
+    width: 100%;
+    background-color:black ;
+  }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    z-index: 1000;
+    padding: 40px;
+    gap: 45px;
+  }
+
+  .navbar.open ul {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  .navbar {
+    position: static;
+  }
+
+  .navbar a {
+    font-size: 55px;
+    padding: 10px 20px;
+  }
+
+  .container-titel {
+    font-size: 50px;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+  }
+
+  .container-titel h1 {
+    margin: 0;
+  }
+
+  .container-tag img {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 70px;
+    z-index: 50;
+  }
+
+  .container-kanye img {
+    width: 300px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    display: none;
+  }
+
+  .article,
+  .article2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .container-article,
+  .container-article2 {
+    width: 90%;
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+
+  .article-image,
+  .article-image2 {
+    width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  .article {
+    position: absolute;
+    top: 55vh; /* Verschuif de afbeelding verder naar beneden */
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 20px solid rgba(255, 255, 255, 0.6);;
+    border-left: 5px solid rgba(255, 255, 255, 0.6);;
+    border-top: 5px solid rgba(255, 255, 255, 0.6);;
+    border-right: 5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+  }
+
+  .article2 {
+    position: absolute;
+    top: 165vh; /* Verschuif de afbeelding verder naar beneden */
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 20px solid rgba(255, 255, 255, 0.6);;
+    border-left: 5px solid rgba(255, 255, 255, 0.6);;
+    border-top: 5px solid rgba(255, 255, 255, 0.6);;
+    border-right: 5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+  }
+
+
+  .burger-menu {
+    display: block;
+  }
+
+  .navbar {
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 100%;
+  }
+
+  .overlay {
+    display: none;
+  }
+}
+
+/* Overlay styling for mobile menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+  display: none;
+}

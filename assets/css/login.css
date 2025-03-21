@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Font1';
+    src: url('../font/font1.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url('../font/font2.otf') format('truetype');
+}
+
+body {
+    font-family: Font2, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../media/images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    overflow:hidden ;
+}
+
+.login-container {
+    color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    position: relative;
+    background-color: black;
+    border: 3px solid #ffffff;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input-group .icon {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #636363;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #494848;
+}
+
+.register-link {
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.register-link a {
+    color: grey;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.form-container.active {
+    display: block;
+    opacity: 1;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-color: black;
+    }
+    .login-container {
+    width: 300px;
+    position: fixed}
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    box-shadow: 5px 10px #ffffff;
+    background-color: black;
+    border: 3px solid #ffffff;
+}
+
+
+

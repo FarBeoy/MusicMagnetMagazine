@@ -1,5 +1,5 @@
 # What is Music Magnet Magazine?
-Music Magnet Magazine is a simple, stylish web-based music magazine designed to showcase the latest music news, artist interviews, and album reviews. It's built as a static website using HTML, CSS, and JavaScript, perfect for music lovers and fans who want to stay updated on the music scene.
+Music Magnet Magazine is a simple, stylish web-based music magazine designed to showcase the latest music news, artist interviews, and album reviews. It's built as a static website using HTML, CSS, JavaScript and PHP perfect for music lovers and fans who want to stay updated on the music scene.
 
 - Features:
 Home Page (index.html):

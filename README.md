@@ -2,8 +2,6 @@
 
 **Music Magnet Magazine** is a modern, interactive online music magazine created using HTML, CSS, JavaScript and PHP. It features engaging music content, artist highlights, and dynamic visuals — designed to offer a seamless user experience.
 
-## Live Demo
-
 ## Features
 - Responsive design for desktop and mobile
 - Artist interviews and spotlight sections

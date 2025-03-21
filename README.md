@@ -17,13 +17,6 @@
 - JavaScript
 - PHP
 
-## Project Structure
-index.html css/ └── style.css js/ └── script.js images/
-
-markdown
-Copy
-Edit
-
 ## Preview
 
 

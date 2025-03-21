@@ -8,9 +8,6 @@ Presents the latest headlines, featured artists, and trending music topics.
 - About Page:
 Learn more about Music Magnet Magazine—our mission, our team, and why we love music.
 
-- Contact Page:
-A simple form for readers to reach out, send feedback, or connect with the team.
-
 - Responsive Design:
 Styled with CSS for a clean, modern, and mobile-friendly user experience.
 
